@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+.component-container{
+  width: 100%;
+  background-image: linear-gradient(rgba(85, 85, 85, 0.6), rgba(119, 119, 119, 0.4)), url("http://drive.google.com/uc?export=view&id=1DzE2HTzEwaEJsZTv9wQRkQ7hGfbxzcbT");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+
+}
+

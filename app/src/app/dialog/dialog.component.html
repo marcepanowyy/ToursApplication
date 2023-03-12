@@ -1,0 +1,59 @@
+
+<div class = "add-tour-container">
+
+  <form [formGroup]="tourForm" class="input-container">
+
+    <div class="header">Add Tour</div>
+
+    <mat-form-field class="tile" appearance="outline">
+      <mat-label>Tour Name</mat-label>
+      <input formControlName = "name" matInput placeholder="Tour Name">
+    </mat-form-field>
+
+    <mat-form-field class="tile" appearance="outline">
+      <mat-label>Tour Country</mat-label>
+      <input formControlName = "country" matInput placeholder="Tour Country">
+    </mat-form-field>
+
+    <mat-form-field class="tile" appearance="fill">
+      <mat-label>Choose Start Date</mat-label>
+      <input formControlName = "startDate" matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="tile" appearance="fill">
+      <mat-label>Choose End Date</mat-label>
+      <input formControlName = "endDate" matInput [matDatepicker]="picker1">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="tile" appearance="outline">
+      <mat-label>Tour Price</mat-label>
+      <input formControlName = "price" matInput type="number" placeholder="Price In $">
+    </mat-form-field>
+
+    <mat-form-field class="tile" appearance="outline">
+      <mat-label>Tour Limit</mat-label>
+      <input formControlName = "limit" matInput type="number" placeholder="Limit">
+    </mat-form-field>
+
+    <mat-form-field class="tile" appearance="outline">
+      <mat-label>Photo Link</mat-label>
+      <input formControlName = "photoLink" matInput placeholder="Photo Link">
+    </mat-form-field>
+
+    <mat-form-field class="tile" appearance="outline">
+      <mat-label>Short description</mat-label>
+      <textarea formControlName = "description" matInput></textarea>
+    </mat-form-field>
+
+    <button class="btn" (click)="addTour()">Save</button>
+
+  </form>
+
+</div>
+

@@ -1,0 +1,66 @@
+<div class="buy-container" *ngIf="tours && orders">
+
+  <ng-container [ngSwitch]="orders.length > 0">
+
+    <div class="buy-info" *ngSwitchCase="true">
+
+<!--      <div class="header">Your bought tours:</div>-->
+
+      <div class="data-container">
+
+        <table class="table">
+
+          <th>Tour Name</th>
+          <th>Country</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>No.</th>
+          <th>Total</th>
+          <th>Purchase Date</th>
+          <th>Status</th>
+
+          <tr *ngFor="let order of orders">
+
+            <ng-container *ngFor="let tour of tours">
+
+              <ng-container *ngIf="order.tourId === tour._id && (selectedOption === getStatus(tour) || selectedOption === 'all')">
+
+                <td>{{tour.name}}</td>
+                <td>{{tour.country}}</td>
+                <td>{{tour.startDate}}</td>
+                <td>{{tour.endDate}}</td>
+                <td>{{order.amount}}</td>
+                <td>{{order.amount * tour.price}}$</td>
+                <td>{{order.date | date: 'medium'}}</td>
+                <td>{{getStatus(tour)}}</td>
+
+              </ng-container>
+
+            </ng-container>
+
+        </table>
+
+      </div>
+
+      <select [(ngModel)]="selectedOption" class="select-status">
+
+        <option value="all" disabled>Select Status</option>
+        <option>all</option>
+        <option>await</option>
+        <option>active</option>
+        <option>finished</option>
+
+      </select>
+
+    </div>
+
+    <div class="empty" *ngSwitchDefault>
+      <div class="empty-buy-container">You bought nothing!</div>
+      <button class="empty-btn"><a [routerLink]="'../Tours'">Return To Tours</a></button>
+      <button class="empty-btn"><a [routerLink]="'../Basket'">Return To Basket</a></button>
+    </div>
+
+  </ng-container>
+
+</div>
+

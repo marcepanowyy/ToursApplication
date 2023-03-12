@@ -1,0 +1,50 @@
+
+<div class="container">
+
+
+  <ng-container *ngIf="users">
+
+  <table class="user-table">
+
+    <th>user id</th>
+    <th>email</th>
+    <th>banned</th>
+    <th>role</th>
+
+    <ng-container *ngFor="let user of users">
+
+      <tr class="row">
+
+        <td>{{user._id}}</td>
+
+        <td>{{user.email}}</td>
+
+        <td>{{user.blocked}}</td>
+
+        <td>{{Roles[user.role]}}</td>
+
+
+        <td>
+
+          <ng-container *ngIf="!user.blocked"><button class="btn" (click)="ban(user._id)">ban</button></ng-container>
+          <ng-container *ngIf="user.blocked"><button class="btn" (click)="unban(user._id)">unban</button></ng-container>
+
+        </td>
+
+        <td>
+
+          <ng-container *ngIf="user.role !== Roles.client"><button class="btn" (click)="setClient(user._id)">Set client</button></ng-container>
+          <ng-container *ngIf="user.role !== Roles.manager"><button class="btn" (click)="setManager(user._id)">Set manager</button></ng-container>
+          <ng-container *ngIf="user.role !== Roles.admin"><button class="btn" (click)="setAdmin(user._id)">Set admin</button></ng-container>
+
+        </td>
+
+      </tr>
+
+    </ng-container>
+
+  </table>
+
+  </ng-container>
+
+</div>

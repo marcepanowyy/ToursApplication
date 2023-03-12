@@ -1,0 +1,95 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="tour-container">
+
+<!--  <app-filter-->
+
+<!--    (countryChange)="changeCountry($event)"-->
+<!--    (priceBottomChange)="changeBottomPrice($event)"-->
+<!--    (priceTopChange)="changeTopPrice($event)"-->
+<!--    (votesChange)="changeVotes($event)"-->
+<!--    (filterReset)="changeFiltering()"-->
+
+<!--  ></app-filter>-->
+
+  <div class="tour-box">
+
+<!--    <div class="card" *ngFor="let tour of (tours | FilterTours:selectedCountry:selectedBottomPrice:selectedTopPrice:selectedVotes)"-->
+    <div class="card" *ngFor="let tour of tours | paginate: { itemsPerPage: 9, currentPage: p }"
+
+    [ngClass] = "{'cheapy': tour === minPriceTour, 'pricy' : tour === maxPriceTour}">
+
+      <div class="card-layer" [ngClass]="{'limited': tour.limit > 0 && tour.limit <= 3, 'disabled' : tour.limit === 0}">
+
+        <div class="name">{{tour.name | uppercase}}</div>
+
+        <figure class="image-figure" routerLink="/Tours/Tour/{{tour._id}}">
+
+          <img src="{{tour.photoLink}}" class="img-class" alt="image" [ngClass]="{'disabled-img': tour.limit === 0}">
+
+        </figure>
+
+        <div class="description">
+
+          {{tour.description}}
+
+        </div>
+
+        <div class="details">
+
+          <div class="country tile">Country: {{tour.country | uppercase}}</div>
+          <div class="start-date tile">Start Date: {{tour.startDate | date: 'mediumDate'}}</div>
+          <div class="end-date tile">End Date: {{tour.endDate | date: 'mediumDate'}}</div>
+          <div class="limit tile">Limit: {{tour.limit}}</div>
+          <div class="price tile">Price: {{tour.price}}$</div>
+
+        </div>
+
+<!--        <ng-container *ngIf="authService.isAdmin()">-->
+
+<!--          <button mat-fab class="delete-button btn" (click)="deleteTour(tour)" [ngClass]="{'limited': tour.limit > 0 && tour.limit <= 3, 'disabled' : tour.limit === 0}">-->
+<!--            <mat-icon>delete</mat-icon>-->
+<!--          </button>-->
+
+<!--        </ng-container>-->
+
+<!--        <ng-container *ngIf="authService.isLoggedIn()">-->
+
+<!--          <button [disabled] = "!authService.isLoggedIn()" mat-fab class="thumb-up btn" (click)="addVote(tour, +1)" [ngClass]="{'limited': tour.limit > 0 && tour.limit <= 3, 'disabled' : tour.limit === 0}">-->
+<!--            <mat-icon class="voting-icon" >thumb_up</mat-icon>-->
+<!--          </button>-->
+
+<!--          <button [disabled] = "!authService.isLoggedIn()" mat-fab class="thumb-down btn" (click)="addVote(tour, -1)" [ngClass]="{'limited': tour.limit > 0 && tour.limit <= 3, 'disabled' : tour.limit === 0}">-->
+<!--            <mat-icon class="voting-icon">thumb_down</mat-icon>-->
+<!--          </button>-->
+
+<!--        </ng-container>-->
+
+        <div class="reservation-bar">
+
+          <button mat-raised-button class="reservation-button btn" [disabled] = "tour.limit <= 0 || !authService.isClient()" (click) = "updateReservatedTours(tour, 1)">+</button>
+          <button mat-raised-button class="cancel-reservation-button btn" [disabled] = "tour.limit >= tour.initialLimit || !authService.isClient()" (click) = "updateReservatedTours(tour, -1)">-</button>
+
+        </div>
+
+        <div class="votes-info" [ngClass]="{'limited': tour.limit > 0 && tour.limit <= 3, 'disabled' : tour.limit === 0}">
+          {{tour.votes}}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="pagination">
+
+    <pagination-controls class="pagination-controls" (pageChange)="p = $event"></pagination-controls>
+
+  </div>
+
+</div>
+
+
+

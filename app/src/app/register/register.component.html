@@ -1,0 +1,57 @@
+
+<div class="register-container">
+
+    <form [formGroup]="registerForm" (ngSubmit)="registerSubmited()" class="input-container">
+
+      <div class="header">Register</div>
+
+      <div class="row">
+
+        <label for="email" class="form-label">Address Email:</label>
+        <input type="email" class="form-control input-field" id="email" formControlName="email" placeholder="Address Email">
+        <div class="form-text"></div>
+
+        <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+          Email is Required
+        </div>
+
+        <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+          Email is invalid
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <label for="pwd" class="form-label">Password:</label>
+        <input type="password" class="form-control input-field" id="pwd" formControlName="pwd" placeholder="Password">
+
+        <div class="form-text text-danger" *ngIf="PWD.errors?.['required'] && (PWD.touched || PWD.dirty)">
+          Password is Required
+        </div>
+
+        <div class="form-text text-danger" *ngIf="PWD.errors?.['minlength'] || PWD.errors?.['maxlength'] && (PWD.touched || PWD.dirty)">
+          Password should be at least 5 and max 12 characters long.
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <label for="rpwd" class="form-label">Repeat Password:</label>
+        <input type="password" class="form-control input-field" id="rpwd" formControlName="rpwd" placeholder="Repeat Password">
+        <div class="form-text"></div>
+
+        <div class="form-text text-danger" [ngStyle]="{'display': repeatPass}">
+          Repeat Password is Invalid.
+        </div>
+
+      </div>
+
+        <div class="btn-div">
+          <button type="submit" [disabled]="registerForm.invalid" class="btn">Submit</button>
+        </div>
+
+    </form>
+
+</div>

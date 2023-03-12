@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  color: #252525;
+}
+
+
+.register-container{
+  width: 100%;
+  height: calc(100vh - 4.5rem);
+  position: relative;
+  padding: 2rem;
+}
+
+.input-container{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  border-radius: 2rem;
+  /*border-bottom-right-radius: 2rem;*/
+  /*border-top-left-radius: 2rem;*/
+}
+
+.row{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.header{
+  font-size: 1.7rem;
+  width: 50%;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 1px solid #252525;
+}
+
+.text-danger{
+  color: #800000;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  margin-left: 0.3rem;
+}
+
+.form-label{
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.input-field{
+  width: 100%;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn{
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+@media all and (max-height: 500px){
+
+  .register-container{
+    height: auto;
+  }
+
+  .input-container{
+    position: relative;
+    transform: translate(-50%, 0);
+    width: 25rem;
+    height: auto;
+  }
+
+}

@@ -1,0 +1,438 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url("src/assets/fonts/Cormorant/static/Cormorant-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url("src/assets/fonts/Bitter/static/Bitter-Regular.ttf") format("truetype");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* CARD */
+
+.tour-container{
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.tour-box{
+  width: 90%;
+  /*max-height: 90rem;*/
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0.7rem 1rem;
+}
+
+.card{
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 17rem;
+  height: 27.5rem;
+  position: relative;
+  margin: 1.5rem;
+  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.29);
+  color: #252525;
+}
+
+.name{
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.image-figure{
+  cursor: pointer;
+  height: 8rem;
+  width: 8rem;
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  margin: 0 auto;
+}
+
+.image-figure:hover{
+  transform: translateY(-3px);
+  transition: all 0.3s;
+}
+
+.image-figure:active{
+  transform: translateY(-1px);
+}
+
+.img-class{
+  width: 100%;
+  object-fit: cover;
+}
+
+.description{
+  font-family: "Cormorant", serif;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  width: 80%;
+  margin: 0.4rem auto;
+}
+.details{
+  font-family: "Cormorant", serif;
+}
+
+.tile{
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.05rem;
+}
+
+.btn, .feedback{
+  position: absolute;
+  background-color: white;
+}
+
+.delete-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transform: translate(50%, -50%) scale(0.7);
+  color: rgba(107, 107, 107, 0.42);
+  background-color: white;
+}
+
+.mat-mdc-fab.mat-accent, .mat-mdc-mini-fab.mat-accent {
+  --mdc-fab-container-color: transparent;
+}
+
+.reservation-bar{
+  position: absolute;
+  display: flex;
+  width: 40%;
+  left: 50%;
+  padding: 0.5rem;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  justify-content: space-evenly;
+}
+
+
+.reservation-button, .cancel-reservation-button{
+  position: relative;
+  transform: scale(0.8);
+  font-size: 1.2rem;
+  color: #252525 !important;
+}
+
+.thumb-up, .thumb-down{
+  position: absolute;
+  font-size: 1.2rem;
+  transform: translate(50%, -50%) scale(0.7);
+  right: 0;
+}
+
+.thumb-up:hover, .thumb-down:hover, .delete-button:hover{
+  filter: brightness(0.9);
+}
+
+
+.thumb-up{
+  top: 40%;
+}
+
+.thumb-down{
+  top: 50%;
+}
+
+
+.voting-icon{
+  color: rgba(107, 107, 107, 0.42);
+  background-color: transparent;
+}
+
+.votes-info{
+  font-family: "Times New Roman", serif;
+  color: #252525;
+  background-color: white;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  text-align: center;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cheapy{
+  animation: animate1 1s linear infinite;
+}
+
+.pricy{
+  animation: animate2 1s linear infinite;
+}
+
+
+@keyframes animate1 {
+
+  0%{
+    box-shadow: none;
+  }
+
+  25%{
+    box-shadow: 0 0 30px #f69292;
+  }
+
+  50%{
+    box-shadow: 0 0 30px 10px #f69292;
+  }
+
+  75%{
+    box-shadow: 0 0 30px #f69292;
+  }
+
+  100%{
+    box-shadow:
+    none;
+  }
+}
+
+@keyframes animate2 {
+
+  0%{
+    box-shadow: none;
+  }
+
+  25%{
+    box-shadow: 0 0 30px #0f7dde;
+  }
+
+  50%{
+    box-shadow: 0 0 30px 10px #0f7dde;
+  }
+
+  75%{
+    box-shadow: 0 0 30px #0f7dde;
+  }
+
+  100%{
+    box-shadow:
+      none;
+  }
+}
+
+.card-layer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.disabled{
+  background-image: linear-gradient(rgba(37, 37, 37, 0.35), rgba(9, 9, 9, 0.35));
+}
+
+.disabled-img{
+  filter: brightness(60%);
+}
+
+.limited{
+  background-image: linear-gradient(rgba(255, 194, 194, 0.3), rgba(248, 108, 108, 0.3));
+}
+
+
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-controls{
+  margin: 0 auto;
+}
+
+
+:host ::ng-deep .ngx-pagination{
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem;
+
+}
+
+:host ::ng-deep  .ngx-pagination .current {
+  background: #252525;
+}
+
+:host ::ng-deep  .ngx-pagination li {
+  /*background: #575757;*/
+}
+
+:host ::ng-deep .ngx-pagination a{
+  /*padding: 0.3rem;*/
+}
+
+:host ::ng-deep .ngx-pagination a:hover{
+  /*background-color: rgba(255, 255, 255, 0.6);*/
+}
+
+
+
+@media all and (max-width: 1200px){
+
+  .card{
+    scale: 0.95;
+    margin: 1rem;
+  }
+}
+
+
+@media all and (max-width: 1165px){
+
+  .card{
+    scale: 0.9;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 1120px){
+
+  .card{
+    margin: 0;
+    scale: 0.85;
+
+  }
+}
+
+@media all and (max-width: 1025px){
+
+  .card{
+    scale: 0.8;
+    margin: -1.5rem -0.8rem;
+
+  }
+}
+
+@media all and (max-width: 940px){
+
+  .card{
+    scale: 0.72;
+    margin: -2.5rem -1.5rem;
+  }
+
+  /*.tour-box{*/
+  /*  width: 85%;*/
+  /*}*/
+}
+
+@media all and (max-width: 860px){
+
+  .card{
+    scale: 0.9;
+    margin: 0 0.5rem;
+  }
+
+}
+
+@media all and (max-width: 772px){
+
+  .card{
+    scale: 0.85;
+    margin: -1rem 0;
+  }
+}
+
+@media all and (max-width: 730px){
+
+  .card{
+    scale: 0.8;
+    margin: -1.5rem -1rem;
+  }
+}
+
+@media all and (max-width: 670px){
+
+  .tour-container{
+    padding: 1rem;
+  }
+
+  .tour-box{
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+  }
+
+  .card{
+    scale: 0.75;
+    margin: -2.5rem -1.2rem;
+  }
+
+}
+
+@media all and (max-width: 550px){
+
+  .card{
+    scale: 0.7;
+    margin: -3rem -1.5rem;
+  }
+
+}
+
+@media all and (max-width: 515px){
+
+  .card{
+    scale: 0.68;
+    margin: -3.5rem -1.8rem;
+  }
+
+}
+
+@media all and (max-width: 480px){
+
+  .card{
+    scale: 0.6;
+    margin: -4.5rem -2.5rem;
+  }
+
+}
+
+@media all and (max-width: 455px){
+
+  .card{
+    scale: 0.55;
+    margin: -5rem -3.3rem;
+  }
+
+}
+
+@media all and (max-width: 380px){
+
+  .card{
+    scale: 0.7;
+    margin: -3.5rem -2rem;
+  }
+
+}

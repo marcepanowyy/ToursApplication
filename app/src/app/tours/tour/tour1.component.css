@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", sans-serif;
+  color: #fafafa;
+}
+
+.container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-container{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container:nth-child(1){
+  background-image: linear-gradient(rgba(37,37,37,0.35),rgba(37,37,37,0.35)), url("http://drive.google.com/uc?export=view&id=1t7piDwO7o-ts_LMMzG-AZrdqR2yK5UcO");
+  height: calc(100vh - 4.5rem) !important;
+  background-position: right 50% bottom 35% !important;
+
+}
+
+.card-container:nth-child(2){
+  background-image: linear-gradient(rgba(37,37,37,0.35),rgba(37,37,37,0.35)), url("http://drive.google.com/uc?export=view&id=1W8ZVrI3EuLHupJz6q8SKffcFM-u-Adf8");
+  background-position: right 50% bottom 15% !important;
+}
+
+.card-container:nth-child(3){
+  background-image: linear-gradient(rgba(37,37,37,0.4),rgba(37,37,37,0.4)), url("http://drive.google.com/uc?export=view&id=1Tem47O-SiZGStY-JzvZHyYGXbtZYSoG9");
+}
+
+.card{
+  width: 100%;
+  /*padding: 1.5rem;*/
+}
+
+/*tour details*/
+
+.card-text{
+  margin: 0 auto;
+  width: 70%;
+  padding: 1.5rem 2.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3rem 6rem rgb(0, 0, 0, 0.1);
+}
+
+.img-shape{
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  transform: translateX(-3rem) translateY(-2rem);
+}
+
+.img-shape1{
+  height: 12rem;
+  width: 12rem;
+  float: left;
+  margin-left: 6rem;
+  margin-top: 4rem;
+  /*filter: brightness(80%);*/
+}
+
+.story-img{
+  width: 100%;
+  background-position: center;
+}
+
+.header1{
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 1.4rem;
+}
+
+.specs{
+  font-size: 0.9rem;
+}
+
+/*people's reviews*/
+
+.review-container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+
+}
+
+.reviews{
+  width: 90%;
+  max-height: 20rem;
+  margin: 1rem auto 0 auto;
+  padding: 0.5rem 1.5rem;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.review{
+  margin-bottom: 1rem;
+  padding: 1rem;
+  scroll-snap-align: start;
+  background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.nickname{
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.description{
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.date{
+  padding-left: 0.4rem;
+  font-size: 0.7rem;
+}
+
+/*test*/
+
+.parent{
+  width: 80%;
+  height: 80%;
+  background-color: red;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+.child{
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+.child:nth-child(1){
+  background-color: #0f7dde;
+}
+.child:nth-child(2){
+  background-color: pink;
+}
+.child:nth-child(3){
+  background-color: green;
+}
+.child:nth-child(4){
+  background-color: yellow;
+}
+.child:nth-child(5){
+  background-color: purple;
+}
+
+/*adding reviews*/
+
+.form-container{
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+
+.input-container{
+  width: 45%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3rem 6rem rgb(0, 0, 0, 0.1);
+
+}
+
+.row{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.text-danger{
+  color: #800000;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  padding: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form-label{
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.input-field{
+  width: 100%;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.submit-btn{
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+
+/*.pudlo{*/
+/*  background-color: red;*/
+/*  height: calc(100vh - 4.5rem);*/
+/*  width: 100%;*/
+/*  overflow-y: scroll;*/
+/*  scroll-snap-type: y mandatory;*/
+/*}*/
+
+/*.pudloinside{*/
+
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  scroll-snap-align: start;*/
+/*}*/

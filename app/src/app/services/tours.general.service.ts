@@ -1,0 +1,23 @@
+import { Injectable } from '@angular/core';
+import {BehaviorSubject, Subject} from "rxjs";
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class ToursGeneralService {
+
+  private dataStream = new BehaviorSubject("")
+
+  constructor() {
+  }
+
+  getDataStream(){
+    return this.dataStream.asObservable()
+  }
+
+  putDataToStream(data: any){
+    this.dataStream.next(data)
+  }
+
+}

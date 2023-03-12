@@ -1,0 +1,403 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  color: #252525;
+}
+
+
+.start-container{
+  /*height: 100rem;*/
+  height: auto;
+  width: 100%;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.text-box{
+  text-align: center;
+  min-height: 55rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 100;
+  position: relative;
+}
+
+.header{
+  margin-top: 1rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.text-field-header{
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.text-field, .header{
+  width: 60%;
+}
+
+.text{
+  font-size: 0.8rem;
+}
+
+.text-field{
+  padding: 1rem;
+}
+
+.header{
+  transform: translateX(-15%);
+}
+
+.text-field1{
+  transform: translateX(-15%);
+}
+
+.text-field2{
+  transform: translateX(10%);
+}
+
+.text-field3{
+  transform: translateX(20%);
+}
+
+.text-field4{
+  transform: translateX(5%);
+}
+
+.text-field5{
+  transform: translateX(-5%);
+}
+
+
+.circle-box{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.circle{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.circle1{
+  top: -10%;
+  right: 0;
+  height: 25rem;
+  width: 25rem;
+  clip-path: circle(50% at right 50%);
+  -webkit-clip-path: circle(50% at right 50%);
+}
+
+.circle2{
+  top: 15rem;
+  left: 0;
+  height: 30rem;
+  width: 30rem;
+  clip-path: circle(50% at left 50%);
+  -webkit-clip-path: circle(50% at left 50%);
+}
+
+/*.circle3{*/
+/*  top: 45rem;*/
+/*  right: 0;*/
+/*  height: 40rem;*/
+/*  width: 40rem;*/
+/*  clip-path: circle(50% at right 50%);*/
+/*  -webkit-clip-path: circle(50% at right 50%);*/
+/*  z-index: 1;*/
+/*}*/
+
+.contact-text-field{
+  font-size: 0.8rem;
+  width: 60%;
+}
+
+
+.contact-div{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+}
+
+.photo-plus-data{
+  position: relative;
+}
+
+.tile{
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 30%;
+  height: 8rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-evenly;
+}
+
+
+.el1{
+  padding: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.icon{
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+}
+
+.location{
+}
+
+
+.text-field7{
+  width: 100%;
+  padding: 0;
+}
+
+/*.map{*/
+/*  width: 100%;*/
+/*  border-radius: 2rem;*/
+/*}*/
+
+/*.tree-box{*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  position: absolute;*/
+/*  !*z-index: 100;*!*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*}*/
+
+/*.tree{*/
+/*  position: absolute;*/
+/*}*/
+
+/*.tree-img{*/
+/*  width: 100%;*/
+/*}*/
+
+/*.tree1{*/
+/*  top: 2rem;*/
+/*  right: 1rem;*/
+/*  width: 15rem;*/
+/*  height: 15rem;*/
+/*}*/
+
+
+/*.tree2{*/
+/*  left: 1.5rem;*/
+/*  top: 20rem;*/
+/*  width: 20rem;*/
+/*}*/
+
+
+
+@media all and (max-width: 1200px) {
+
+  .tree2{
+    width: 19rem;
+    left: 2rem;
+  }
+
+  .text-field2{
+    transform: translateX(15%);
+  }
+
+  .text-field7{
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+@media all and (max-width: 1050px) {
+
+  .tree2{
+    width: 18rem;
+  }
+
+  .text-field2{
+    transform: translateX(25%);
+  }
+
+  .text-field3{
+    transform: translateX(25%);
+  }
+
+  .text-field7{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 900px) {
+
+  .tree2{
+    width: 17rem;
+    top: 22rem;
+  }
+
+  .header{
+    transform: translateX(-5%);
+  }
+
+  .text-field1{
+    transform: translateX(-5%);
+  }
+
+  .text-field2{
+    transform: translateX(25%);
+  }
+
+  .text-field3{
+    transform: translateX(27%);
+  }
+
+  .text-field4{
+    transform: translateX(0);
+  }
+
+  .text-field5{
+    transform: translateX(0);
+  }
+
+  .text-field7{
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+@media all and (max-width: 830px) {
+
+  .tree2{
+    width: 15rem;
+  }
+
+  .text-field7{
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+@media all and (max-width: 750px) {
+
+  .tree2{
+    width: 14rem;
+    left: 2.2rem;
+  }
+
+  .header{
+    transform: translateX(0);
+  }
+
+  .text-field1{
+    transform: translateX(0);
+  }
+
+  .text-field4{
+    transform: translateX(-25%);
+  }
+
+  .text-field5{
+    transform: translateX(0);
+  }
+
+}
+
+
+@media all and (max-width: 700px) {
+
+  .tree2{
+    display: none;
+  }
+
+  .header{
+    transform: translateX(0);
+    font-size: 1.4rem;
+  }
+
+  .text-field-header{
+    font-size: 1.1rem;
+  }
+
+  .text-field{
+    width: 80%;
+  }
+
+  .text{
+    font-size: 0.7rem;
+  }
+
+  .text-field1{
+    transform: translateX(0);
+  }
+
+  .text-field2{
+    transform: translateX(0);
+  }
+
+  .text-field3{
+    transform: translateX(0);
+  }
+
+  .text-field4{
+    transform: translateX(0);
+  }
+
+  .text-field5{
+    transform: translateX(0);
+  }
+
+  .text-field7{
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+@media all and (max-width: 950px){
+
+  .text-field6{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+
+}
+
+@media all and (max-width: 850px){
+
+  .text-field6{
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .tile{
+    width: 70%;
+  }
+
+}

@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url("src/assets/fonts/Cormorant/static/Cormorant-Regular.ttf") format("truetype");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  color: #252525;
+}
+
+.reserve-container{
+  width: 100%;
+  height: calc(100vh - 4.5rem);
+  position: relative;
+}
+
+/* start empty basket*/
+
+.empty{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 2rem;
+  width: 27rem;
+  height: 16rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.empty-btn{
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.empty-btn a{
+  text-decoration: none;
+  color: #252525;
+  letter-spacing: 0.08rem;
+}
+
+/* end empty basket */
+
+/*start reservation div*/
+
+.reserve-info{
+  font-family: "Cormorant", sans-serif;
+  padding: 2rem;
+  text-align: center;
+  width: 85%;
+  height: auto;
+  background-color: rgba(250, 250, 250, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+}
+
+.header{
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+td, th{
+  border-bottom: 1px solid #252525;
+}
+
+/*td:last-child{*/
+/*  width: 8rem;*/
+/*}*/
+
+.data-container{
+  max-height: 15rem;
+  overflow-y: scroll;
+}
+
+.table{
+  width: 100%;
+  text-align: center;
+}
+
+th{
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+td{
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
+
+.buy{
+  padding: 0.5rem;
+  margin: 0.2rem;
+  /*background-color: transparent;*/
+}
+
+.select-tours{
+  padding: 0.5rem;
+}
+
+/*start scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(250, 250, 250, 0.83);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cacaca;
+}
+
+/*end scrollbar*/
+
+
+.lower{
+  background-image: linear-gradient(rgba(248, 82, 82, 0.1), rgba(255, 0, 0, 0.13));
+  /*background-image: linear-gradient(rgba(168, 10, 28, 0.1), rgba(138, 0, 250, 0.13));*/
+}
+
+.higher{
+  background-image: linear-gradient(rgba(12, 72, 15, 0.15), rgba(0, 248, 2, 0.15));
+}

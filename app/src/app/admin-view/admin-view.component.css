@@ -1,0 +1,43 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", sans-serif;
+  color: #252525;
+}
+
+.container{
+  min-height: calc(100vh - 4.5rem);
+  background-color: white;
+}
+
+.user-table{
+  margin: 1rem auto;
+  width: 55rem;
+  text-align: center;
+  padding: 1rem;
+  border-collapse: collapse;
+}
+
+th{
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+
+td {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+tr:hover{
+  background-color: rgba(232, 232, 232, 0.45);
+}
+
+.btn{
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+/*td:first-child {*/
+/*}*/

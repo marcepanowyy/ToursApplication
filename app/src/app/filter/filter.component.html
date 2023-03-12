@@ -1,0 +1,54 @@
+
+<!--<div mat-dialog-content class="filter-container">-->
+<div class="filter-container">
+
+  <div class="input-container">
+
+
+    <div class="row">
+
+      <label for="country" class="form-label">Country:</label>
+      <select id = "country" class="input-field" [ngModel]="selectedCountry" placeholder="Select Country" (ngModelChange)="onCountryChange($event)">
+        <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+      </select>
+
+    </div>
+
+
+    <div class="row">
+
+      <label for="country" class="form-label">Min. Price:</label>
+      <input type="number" min="0" class="form-control input-field" id="maxPrice" placeholder="Min. Price" [ngModel]="selectedBottomPrice" (ngModelChange)="onBottomPriceChange($event)">
+      <div class="form-text"></div>
+
+    </div>
+
+
+    <div class="row">
+
+      <label for="minPrice" class="form-label">Max. Price:</label>
+      <input type="number" min="0" class="form-control input-field" id="minPrice" placeholder="Max. Price" [ngModel]="selectedTopPrice" (ngModelChange)="onTopPriceChange($event)">
+      <div class="form-text"></div>
+
+    </div>
+
+    <div class="row">
+
+      <label for="votes" class="form-label">Vote number:</label>
+      <input type="number" class="form-control input-field" id="votes" placeholder="Votes" [ngModel]="selectedVotes" (ngModelChange)="onVotesChange($event)">
+      <div class="form-text"></div>
+
+    </div>
+
+    <div class="row">
+
+      <label class="form-label"></label>
+      <div class="btn-div input-field">
+        <button type="button" class="btn" (click)="resetFilter()">Clear All</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

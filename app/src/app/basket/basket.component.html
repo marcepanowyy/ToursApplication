@@ -1,0 +1,80 @@
+
+<div class="reserve-container" *ngIf="reservedTours && tours">
+
+  <ng-container [ngSwitch]="reservedTours.size > 0">
+
+<!--    <div class="reserve-info" *ngSwitchCase="true" [ngClass] = "checkSumCondition() ? 'lower' : 'higher'">-->
+    <div class="reserve-info" *ngSwitchCase="true">
+
+      <div class="header">Your reserved tours:</div>
+
+      <div class="data-container">
+
+        <table class="table">
+
+          <th>Tour Name</th>
+          <th>Country</th>
+          <th>Total</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>No.</th>
+          <th>Buy me!</th>
+
+          <tr *ngFor="let tour of tours">
+
+            <ng-container *ngIf="reservedTours.has(tour._id)">
+
+            <!-- have to do it with functions to have better complexity&ndash;&gt;-->
+
+            <td>{{tour.name}}</td>
+            <td>{{tour.country}}</td>
+            <td> {{getToursTotalPrice(tour)}} USD</td>
+            <td>{{tour.startDate}} </td>
+            <td>{{tour.endDate}}</td>
+            <td>{{reservedTours.get(tour._id)}}</td>
+
+            <td>
+
+              <!-- object.key -> tour id-->
+              <!-- chosen.get(object.key) -> selected amount option of particular tour id to be bought-->
+
+              <select class="select-tours" (change)="selectChangeHandler($event, tour._id)">
+
+                <ng-container *ngFor="let item of getArr(tour._id); let i = index">
+
+                  <!-- trick to prevent selected values from disappearing after button click-->
+                  <ng-container [ngSwitch]="i == chosen.get(tour._id)">
+
+                    <option *ngSwitchCase="true" selected="selected">{{i}}</option>
+                    <option *ngSwitchDefault>{{i}}</option>
+
+                  </ng-container>
+
+                </ng-container>
+
+              </select>
+
+              <!-- update maps onclick-->
+              <button class="btn buy" (click) = "update(tour._id)">BUY</button>
+
+            </td>
+
+            </ng-container>
+
+          </tr>
+
+        </table>
+
+      </div>
+
+    </div>
+
+    <div class="empty" *ngSwitchDefault>
+      <div class="empty-basket-header">Your basket is empty!</div>
+      <button class="empty-btn"><a [routerLink]="'../Tours'">Return To Tours</a></button>
+    </div>
+
+  </ng-container>
+
+</div>
+

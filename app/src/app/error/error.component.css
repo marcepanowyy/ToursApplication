@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  text-align: center;
+  height: calc(100vh - 4.5rem);
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+.info-message{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  padding: 3rem;
+  line-height: 2.5rem;
+}
+
+.header{
+  font-size: 3.5rem;
+  padding: 2rem;
+}
+
+.text{
+  font-size: 1.5rem;
+}
+
+@media all and (max-width: 1010px) {
+
+  .info-message{
+    top: 40%;
+  }
+
+  .header{
+    font-size: 3rem;
+  }
+
+}
+
+@media all and (max-width: 900px) {
+
+  .info-message{
+    width: 80%;
+    top: 35%;
+  }
+
+  .header{
+    font-size: 2.5rem;
+  }
+
+  .text{
+    font-size: 1.3rem;
+  }
+}
+
+@media all and (max-width: 700px) {
+
+  .info-message{
+    line-height: 2rem;
+    width: 85%;
+    top: 30%;
+  }
+
+  .header{
+    font-size: 2.2rem;
+  }
+
+  .text{
+    font-size: 1.2rem;
+  }
+}
+
+
+@media all and (max-width: 600px) {
+
+  .info-message{
+    line-height: 2rem;
+    top: 25%;
+  }
+
+  .header{
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .text{
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 570px) {
+
+  .info-message{
+    line-height: 1.5rem;
+  }
+
+  .header{
+    padding: 0.5rem;
+    font-size: 1.7rem;
+  }
+
+  .text{
+    font-size: 0.8rem;
+  }
+}
+

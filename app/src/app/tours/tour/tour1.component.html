@@ -1,0 +1,144 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<ng-container *ngIf="tour">
+
+  <div class="container">
+
+    <div class="card-container">
+
+      <div class="card">
+
+<!--        <figure class="img-shape img-shape1">-->
+
+<!--                    <img class="story-img" src="{{tour.photoLink}}" alt="tour details photo">-->
+
+<!--                  </figure>-->
+
+        <div class="card-text">
+
+          <div class="header1">{{tour.name}}</div>
+
+          <p class="specs">{{tour.description}} Etiam sit amet est eu elit suscipit scelerisque at sed libero. {{tour.country}} in bibendum ante in nisl mollis, non scelerisque lorem bibendum. Morbi {{tour.startDate}} convallis facilisis {{tour.endDate}} dolor, at consectetur odio. </p>
+          <p class="specs">Integer sit amet viverra nunc, sed faucibus ex. Integer vulputate est non nunc faucibus fringilla. Cras consequat sodales arcu vel aliquet. Integer nec iaculis erat.</p>
+          <p class="specs">In bibendum ante in {{tour.price}} nisl mollis, non scelerisque lorem bibendum. Morbi {{tour.votes}} convallis facilisis dolor, at consectetur odio. Integer {{tour.limit}} sit amet viverra nunc, sed faucibus ex. Integer vulputate est non nunc faucibus fringilla. Cras consequat sodales arcu vel aliquet. Integer nec iaculis erat.</p>
+
+          <!--            <button mat-raised-button class="reservation-button btn" [disabled] = "tour.limit <= 0" (click) = "updateReservatedTours(1)">+</button>-->
+          <!--            <button mat-raised-button class="cancel-reservation-button btn" [disabled] = "tour.limit >= tour.initialLimit" (click) = "updateReservatedTours(-1)">-</button>-->
+
+        </div>
+
+      </div>
+
+<!--      <div class="parent">-->
+
+<!--        <div class="child">wewew</div>-->
+<!--        <div class="child">wadada</div>-->
+<!--        <div class="child">wsdasx</div>-->
+<!--        <div class="child">zzzz</div>-->
+<!--        <div class="child">wewew</div>-->
+
+<!--      </div>-->
+
+
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+
+        <div class="review-container">
+
+          <div class="header1">Customer Reviews On {{tour.name}}</div>
+
+          <div class="reviews">
+
+            <div class="review" *ngFor="let review of reviews">
+
+              <div class="nickname">{{review.nickname}}</div>
+              <div class="description">{{review.description}}</div>
+              <div class="date">{{review.date | date: 'mediumDate'}}</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+
+        <div class="form-container">
+
+          <form [formGroup]="reviewForm" (ngSubmit)="add()" class="input-container">
+
+            <div class="header1">Add your review!</div>
+
+            <div class="row">
+
+              <label for="nickname" class="form-label">Nickname:</label>
+              <input type="text" class="form-control input-field" id="nickname" formControlName="nickname" placeholder="Nickname">
+
+              <div class="form-text text-danger" *ngIf="Nickname.errors?.['required'] && (Nickname.touched || Nickname.dirty)">
+                Nickname is Required
+              </div>
+
+              <div class="form-text text-danger" *ngIf="Nickname.errors?.['minlength'] && (Nickname.touched || Nickname.dirty)">
+                Nickname is too short. Required at least 5 characters.
+              </div>
+
+              <div class="form-text text-danger" *ngIf="Nickname.errors?.['pattern'] && (Nickname.touched || Nickname.dirty)">
+                Nickname should start with Alphabet
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <label for="description" class="form-label">Description</label>
+              <textarea type="text" class="form-control input-field" id="description" formControlName="description" placeholder="Description"></textarea>
+              <div class="form-text"></div>
+
+              <div class="form-text text-danger" *ngIf="Description.errors?.['required'] && (Description.touched || Description.dirty)">
+                Description is Required
+              </div>
+
+              <div class="form-text text-danger" *ngIf="Description.errors?.['maxlength'] && (Description.touched || Description.dirty)">
+                Description is too long. Required max. 500 characters.
+              </div>
+
+              <div class="form-text text-danger" *ngIf="Description.errors?.['minlength'] && (Description.touched || Description.dirty)">
+                Description is too short. Required at least 50 characters.
+              </div>
+
+            </div>
+
+            <div class="btn-div">
+              <button type="submit" [disabled]="reviewForm.invalid" class="submit-btn">Submit</button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+<!--  <div class="pudlo">-->
+
+<!--    <div class="pudloinside">1</div>-->
+<!--    <div class="pudloinside">2</div>-->
+<!--    <div class="pudloinside">3</div>-->
+
+<!--  </div>-->
+
+</ng-container>

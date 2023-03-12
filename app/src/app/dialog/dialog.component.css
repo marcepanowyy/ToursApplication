@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  color: #252525;
+}
+
+.add-tour-container{
+  width: 100%;
+  height: calc(100vh - 4.5rem);
+  position: relative;
+}
+
+.input-container{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  /*height: auto;*/
+  max-height: 27rem;
+  overflow-y: scroll;
+  /*height: 32rem;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+
+}
+
+.header{
+  font-size: 1.7rem;
+  width: 50%;
+  text-align: center;
+  font-weight: 500;
+  /*padding: 0 0 1rem 0;*/
+  border-bottom: 1px solid #252525;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.tile{
+  width: 80%;
+  margin-top: 0.2rem;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+.btn{
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(250, 250, 250, 0.83);
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cacaca;
+}

@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", sans-serif;
+  color: #252525;
+  /*color: white;*/
+}
+
+.container{
+  width: 100%;
+  padding: 5.6rem 2rem;
+  /*padding: 2rem 0;*/
+  height: auto;
+  /*height: calc(100vh - 4.5rem);*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  /*background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("http://drive.google.com/uc?export=view&id=1Tem47O-SiZGStY-JzvZHyYGXbtZYSoG9");*/
+
+  background-size: cover;
+  background-position: center;
+
+}
+
+.card{
+  width: 85%;
+  /*width: 100%;*/
+  height: 23rem;
+  margin: 0 auto 5rem auto;
+  box-shadow: 0 3rem 6rem rgb(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transform: skewX(-12deg);
+  background-color: rgba(255, 255, 255, 0.7);
+  /*border-bottom-right-radius: 2rem;*/
+  /*border-top-left-radius: 2rem;*/
+  /*border-radius: 2rem;*/
+  /*background-color: red;*/
+}
+
+/*tour details*/
+
+.img-shape{
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  transform: translateX(-3rem) translateY(-2rem) skewX(12deg);
+  /*transform: translateX(-3rem) translateY(-2rem);*/
+}
+
+.img-shape1{
+  height: 15rem;
+  width: 15rem;
+  float: left;
+  margin-left: 6rem;
+  margin-top: 4rem;
+}
+
+.img-shape2{
+  height: 18rem;
+  width: 18rem;
+  float: right;
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+
+.story-img{
+  width: 100%;
+  background-position: center;
+}
+
+.card-text{
+  transform: skewX(12deg);
+}
+
+.header1{
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 1.4rem;
+}
+
+.specs{
+  padding-right: 2rem;
+  font-size: 0.9rem;
+}
+
+/*adding reviews*/
+
+.form-container{
+  margin: 0 auto;
+}
+
+.input-container{
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 1rem 1.5rem 1rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+  transform: skewX(12deg);
+}
+
+.form-container .header1{
+  margin-top: 1rem;
+}
+
+.row{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.text-danger{
+  color: #800000;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  margin-left: 0.3rem;
+}
+
+.form-label{
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.input-field{
+  width: 100%;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.submit-btn{
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+
+/*people's reviews*/
+
+.review-container{
+  margin: 0 auto;
+  transform: skewX(12deg);
+}
+
+.reviews{
+  max-height: 16rem;
+  overflow-y: scroll;
+  margin: auto 6rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.review{
+  margin-bottom: 1rem;
+}
+
+.nickname{
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.description{
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.date{
+  padding-left: 0.4rem;
+  font-size: 0.7rem;
+}
+
+

@@ -1,0 +1,43 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<nav>
+
+  <a [routerLink]="'Home'" class="logo-link" (click)="check()">
+    <div class="logo">
+          <mat-icon class="brand-icon">terrain</mat-icon>
+          <span class="brand-name">Spruce Tours</span>
+    </div>
+  </a>
+
+  <input type="checkbox" id="click">
+  <label for="click" class="menu-btn">
+
+    <mat-icon class="icon">menu</mat-icon>
+
+  </label>
+
+  <ul class="menu">
+
+    <li class="li-el" [routerLinkActive]="'active'" (click)="check()"><a [routerLink]="'Home'">Home</a></li>
+    <li class="li-el" [routerLinkActive]="'active'" (click)="check()"><a [routerLink]="'Tours'">Tours</a></li>
+    <li class="li-el" *ngIf="authService.isAdmin() || authService.isManager()" [routerLinkActive]="'active'" (click)="check()"><a [routerLink]="'AddTour'">Add Tour</a></li>
+    <li class="li-el" *ngIf="authService.isAdmin() || authService.isManager()" [routerLinkActive]="'active'" (click)="check()"><a [routerLink]="'AdminView'">Admin View</a></li>
+
+    <li class="li-el" *ngIf="authService.isClient()" [routerLinkActive]="'active'" (click)="check()"><a [routerLink]="'Basket'">Basket
+
+      <div class="res-tours-num" *ngIf="countSum() > 0">
+        {{countSum()}}
+      </div>
+
+      <mat-icon style="margin-left: 0.1rem" class="basket">shopping_cart</mat-icon></a></li>
+
+    <li class="li-el" *ngIf="authService.isClient()" [routerLinkActive]="'active'" (click)="check()"><a  [routerLink]="'Orders'">My Orders</a></li>
+    <li class="li-el" *ngIf="!userData" [routerLinkActive]="'active'" (click)="check()"><a  [routerLink]="'Login'">Log in</a></li>
+    <li class="li-el" *ngIf="!userData" [routerLinkActive]="'active'" (click)="check()"><a [routerLink]="'Register'">Register</a></li>
+    <li class="li-el" *ngIf="userData" (click)="authService.logoutUser()" style="cursor: pointer"><a>Log out</a></li>
+    <li class="li-el username" *ngIf="userData"><a>{{Roles[userData.role]}}: {{userData.email}}</a></li>
+  </ul>
+
+</nav>
+
