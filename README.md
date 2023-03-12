@@ -15,8 +15,6 @@ npm install
 npm run start
 ```
 
----
-
 ### To run app:
 
 1. Open terminal in "app" folder.
@@ -32,14 +30,10 @@ npm install
 npm run start
 ```
 
----
-
 ### Server and App URLs
 
 - Server running on localhost:8080
 - App running on localhost:4200
-
----
 
 ### Running the server and app in dev mode:
 
