@@ -1,58 +1,79 @@
 # ToursApplication
 
-To run server:
+### To run server:
 
-```
-npm install
-```
-```
-npm run start
-```
-
-in "server" folder
-
----
-
-To run app:
+1. Open terminal in "server" folder.
+2. Run the following command to install dependencies:
 
 ```
 npm install
 ```
 
+3. Start the server by running the following command:
+
 ```
 npm run start
 ```
 
-in "app" folder
+---
+
+### To run app:
+
+1. Open terminal in "app" folder.
+2. Run the following command to install dependencies:
+
+```
+npm install
+```
+
+3. Start the app by running the following command:
+
+```
+npm run start
+```
 
 ---
 
-Server running on localhost:8080
+### Server and App URLs
 
-App running on localhost:4200
+- Server running on localhost:8080
+- App running on localhost:4200
 
 ---
 
-After initializing:
+### Running the server and app in dev mode:
 
-To run server in dev mode:
+##### Server
+
+1. Open terminal in "server" folder.
+2. Run the following command to install dependencies:
 
 ```
-npm run watch 
+npm install
 ```
 
+3. To run the server in dev mode, use the following commands:
+
+```
+npm run watch
+```
 ```
 npm run dev
 ```
 
-in "server" folder
+##### App
 
----
-
-To run app in dev mode:
+1. Open terminal in "app" folder
+2. Run the following command to install dependencies:
 
 ```
-npm run dev
+npm install
 ```
 
-in "app" folder
+3. To run the app in dev mode, use the following command:
+
+```
+npm npm run dev
+```
+
+This project uses environment variables to connect to a database, but these variables are not included in the code for security reasons. If you need to configure these variables, please contact the repository owner for instructions on how to do so.
