@@ -37,7 +37,7 @@ npm run start
 
 ### Running the server and app in dev mode:
 
-##### Server
+#### Server
 
 1. Open terminal in "server" folder.
 2. Run the following command to install dependencies:
@@ -55,7 +55,7 @@ npm run watch
 npm run dev
 ```
 
-##### App
+#### App
 
 1. Open terminal in "app" folder
 2. Run the following command to install dependencies:
