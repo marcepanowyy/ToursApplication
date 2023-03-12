@@ -70,4 +70,6 @@ npm install
 npm npm run dev
 ```
 
+---
+
 This project uses environment variables to connect to a database, but these variables are not included in the code for security reasons. If you need to configure these variables, please contact the repository owner for instructions on how to do so.
