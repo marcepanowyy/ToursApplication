@@ -10,17 +10,19 @@ https://user-images.githubusercontent.com/101901301/225701271-405aae20-218a-403f
 
 https://user-images.githubusercontent.com/101901301/225701071-eecdf18d-3d10-442e-8574-743251b9b381.mp4
 
-<br>Additionally, the project provides authentication and authorization functionalities to guarantee the safety and protection of user data. To access specific sections of the platform, users need to be authorized, and their identities are verified through secure authentication techniques..<br>
+<br>Additionally, the project provides authentication and authorization functionalities to guarantee the safety and protection of user data. To access specific sections of the platform, users need to be authorized, and their identities are verified through secure authentication techniques.<br>
 
 https://user-images.githubusercontent.com/101901301/225701431-89691048-a4c4-4771-81d7-5b2c8d640d3e.mp4 <br>
 
 https://user-images.githubusercontent.com/101901301/225701575-acbd944c-ade5-4c7a-9b13-1393a65aefe7.mp4
 
-<br>The project provides a comprehensive description of every travel package, including customer reviews and the option to leave feedback. Users can access detailed information on each package to determine which one best meets their requirements.<br>
+<br>
+
+The website provides a detailed description of each travel package, including customer reviews and the ability to leave feedback. Customers can view the details of each package and decide which one best suits their needs.<br>
 
 https://user-images.githubusercontent.com/101901301/225701842-7dbdfd0a-27ed-481f-9761-124438e6575d.mp4
 
-<br>Overall, the solution provides a comprehensive experience for users seeking to plan their next vacation. The platform's user-friendly interface and extensive array of travel packages cater to the needs of every user..
+<br>Overall, the project provides a comprehensive experience for users seeking to plan their next vacation. The platform's user-friendly interface and extensive array of travel packages cater to the needs of every user..
 
 
 ## How to Run the Server and App
