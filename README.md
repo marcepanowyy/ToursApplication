@@ -10,17 +10,18 @@ https://user-images.githubusercontent.com/101901301/225701271-405aae20-218a-403f
 
 https://user-images.githubusercontent.com/101901301/225701071-eecdf18d-3d10-442e-8574-743251b9b381.mp4
 
-<br>Additionally, the project provides authentication and authorization functionalities to guarantee the safety and protection of user data.<br>
+<br>Additionally, the project provides authentication and authorization functionalities to guarantee the safety and protection of user data.To access specific sections of the platform, users need to be authorized, and their identities are verified through secure authentication techniques.<br>
 
-https://user-images.githubusercontent.com/101901301/225701431-89691048-a4c4-4771-81d7-5b2c8d640d3e.mp4 <br>
+https://user-images.githubusercontent.com/101901301/226106939-24108689-404e-4095-bad0-555abca48beb.mp4
 
-<br>To access specific sections of the platform, users need to be authorized, and their identities are verified through secure authentication techniques.<br>
+
+<!-- https://user-images.githubusercontent.com/101901301/225701431-89691048-a4c4-4771-81d7-5b2c8d640d3e.mp4 <br> -->
+
 
 https://user-images.githubusercontent.com/101901301/225701575-acbd944c-ade5-4c7a-9b13-1393a65aefe7.mp4
 
-<br>
 
-The website provides a detailed description of each travel package, including customer reviews and the ability to leave feedback. Customers can view the details of each package and decide which one best suits their needs.<br>
+<br>The website provides a detailed description of each travel package, including customer reviews and the ability to leave feedback. Customers can view the details of each package and decide which one best suits their needs.<br>
 
 https://user-images.githubusercontent.com/101901301/225701842-7dbdfd0a-27ed-481f-9761-124438e6575d.mp4
 
