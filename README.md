@@ -12,7 +12,7 @@ https://user-images.githubusercontent.com/101901301/225701071-eecdf18d-3d10-442e
 
 <br>Additionally, the project provides authentication and authorization functionalities to guarantee the safety and protection of user data.To access specific sections of the platform, users need to be authorized, and their identities are verified through secure authentication techniques.<br>
 
-https://user-images.githubusercontent.com/101901301/226106939-24108689-404e-4095-bad0-555abca48beb.mp4<br>
+https://user-images.githubusercontent.com/101901301/226106939-24108689-404e-4095-bad0-555abca48beb.mp4
 
 
 
